@@ -627,6 +627,104 @@
     </div>
   </div>
 
+  <!-- ========== CHECKOUT MODAL ========== -->
+  <div class="checkout-overlay" id="checkout-overlay">
+    <div class="checkout-modal" id="checkout-modal">
+      <button class="modal-close" id="checkout-close" aria-label="Fermer">✕</button>
+      <div class="checkout-content" id="checkout-content">
+        <!-- Step 1: Order Summary -->
+        <div class="checkout-step" id="checkout-step-1">
+          <h2 class="checkout-title" data-i18n="checkout_title">📦 Récapitulatif de commande</h2>
+          <div class="checkout-items" id="checkout-items"></div>
+          <div class="checkout-summary">
+            <div class="checkout-row">
+              <span data-i18n="checkout_subtotal">Sous-total</span>
+              <strong id="checkout-subtotal">0,00 €</strong>
+            </div>
+            <div class="checkout-row">
+              <span data-i18n="checkout_shipping">Livraison</span>
+              <strong id="checkout-shipping" class="shipping-free" data-i18n="checkout_free">Gratuite</strong>
+            </div>
+            <div class="checkout-row checkout-total-row">
+              <span data-i18n="checkout_total">Total</span>
+              <strong id="checkout-total-final">0,00 €</strong>
+            </div>
+          </div>
+          <button class="btn-primary checkout-next" id="checkout-to-step2" data-i18n="checkout_continue">
+            Continuer →
+          </button>
+        </div>
+        <!-- Step 2: Customer Info -->
+        <div class="checkout-step hidden" id="checkout-step-2">
+          <h2 class="checkout-title" data-i18n="checkout_info_title">📋 Vos informations</h2>
+          <form id="checkout-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkout-name" data-i18n="checkout_fullname">Nom complet</label>
+                <input type="text" id="checkout-name" placeholder="Jean Dupont" required />
+              </div>
+              <div class="form-group">
+                <label for="checkout-phone" data-i18n="checkout_phone">Téléphone</label>
+                <input type="tel" id="checkout-phone" placeholder="06 XX XX XX XX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="checkout-email2" data-i18n="checkout_email">Email</label>
+              <input type="email" id="checkout-email2" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="checkout-address" data-i18n="checkout_address">Adresse de livraison</label>
+              <input type="text" id="checkout-address" placeholder="12 Rue de Paris, 75001 Paris" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="checkout_payment">Mode de paiement</label>
+              <div class="payment-options">
+                <label class="payment-option selected">
+                  <input type="radio" name="payment" value="card" checked />
+                  <div class="payment-box">
+                    <span class="payment-icon">💳</span>
+                    <span data-i18n="checkout_card">Carte bancaire</span>
+                  </div>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="paypal" />
+                  <div class="payment-box">
+                    <span class="payment-icon">🅿️</span>
+                    <span>PayPal</span>
+                  </div>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="transfer" />
+                  <div class="payment-box">
+                    <span class="payment-icon">🏦</span>
+                    <span data-i18n="checkout_transfer">Virement</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary checkout-next" data-i18n="checkout_confirm">
+              ✅ Confirmer la commande
+            </button>
+          </form>
+          <button class="checkout-back" id="checkout-back" data-i18n="checkout_back">← Retour au récapitulatif</button>
+        </div>
+        <!-- Step 3: Confirmation -->
+        <div class="checkout-step hidden" id="checkout-step-3">
+          <div class="checkout-success">
+            <div class="success-icon">🎉</div>
+            <h2 data-i18n="checkout_success_title">Commande confirmée !</h2>
+            <p data-i18n="checkout_success_msg">Merci pour votre commande. Vous recevrez un email de confirmation avec les détails de livraison sous peu.</p>
+            <div class="order-number">
+              <span data-i18n="checkout_order_num">N° de commande :</span>
+              <strong id="order-number">DEM-000000</strong>
+            </div>
+            <button class="btn-primary" id="checkout-done" data-i18n="checkout_done">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== TOAST NOTIFICATION ========== -->
   <div class="toast" id="toast">
     <span class="toast-icon">✓</span>

@@ -247,6 +247,24 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const productCards = document.querySelectorAll('.product-card');
 const contactForm = $id('contact-form');
 
+/* ── CHECKOUT DOM REFS ────────────────────────────────────── */
+const checkoutOverlay = $id('checkout-overlay');
+const checkoutModal = $id('checkout-modal');
+const checkoutClose = $id('checkout-close');
+const checkoutItemsEl = $id('checkout-items');
+const checkoutSubtotalEl = $id('checkout-subtotal');
+const checkoutShippingEl = $id('checkout-shipping');
+const checkoutTotalFinalEl = $id('checkout-total-final');
+const btnCheckoutToStep2 = $id('checkout-to-step2');
+const checkoutForm = $id('checkout-form');
+const btnCheckoutBack = $id('checkout-back');
+const orderNumberEl = $id('order-number');
+const btnCheckoutDone = $id('checkout-done');
+
+const step1 = $id('checkout-step-1');
+const step2 = $id('checkout-step-2');
+const step3 = $id('checkout-step-3');
+
 /* ── NAVBAR SCROLL ───────────────────────────────────────── */
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -288,6 +306,7 @@ function addToCart(productId) {
   updateCart();
   const t = TRANSLATIONS[currentLang] || TRANSLATIONS.fr;
   showToast(`"${product.name}${t.toast_added}`);
+  openCart();
 
   // Button feedback
   const btn = $id(`add-cart-${productId}`);
@@ -362,11 +381,134 @@ function renderCartItems() {
   });
 }
 
-// "Passer la commande" demo
-$id('btn-checkout').addEventListener('click', () => {
-  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.fr;
-  showToast(t.toast_checkout);
+/* ── CHECKOUT LOGIC ───────────────────────────────────────── */
+function openCheckout() {
+  if (cart.length === 0) return;
   closeCart();
+  
+  // Reset steps
+  step1.classList.remove('hidden');
+  step2.classList.add('hidden');
+  step3.classList.add('hidden');
+  
+  // Render summary items
+  renderCheckoutSummary();
+  
+  checkoutOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout() {
+  checkoutOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function renderCheckoutSummary() {
+  checkoutItemsEl.innerHTML = '';
+  cart.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'checkout-item';
+    div.innerHTML = `
+      <div class="checkout-item-name">
+        ${item.name}
+        <span class="checkout-item-qty">x${item.qty}</span>
+      </div>
+      <div class="checkout-item-price">
+        ${(item.price * item.qty).toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' })}
+      </div>
+    `;
+    checkoutItemsEl.appendChild(div);
+  });
+
+  const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const shipping = subtotal >= 50 ? 0 : 4.90;
+  const total = subtotal + shipping;
+
+  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.fr;
+
+  checkoutSubtotalEl.textContent = subtotal.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+  
+  if (shipping === 0) {
+    checkoutShippingEl.textContent = t.checkout_free || 'Gratuite';
+    checkoutShippingEl.className = 'shipping-free';
+  } else {
+    checkoutShippingEl.textContent = shipping.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+    checkoutShippingEl.className = '';
+  }
+
+  checkoutTotalFinalEl.textContent = total.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+}
+
+// Open checkout on button click
+$id('btn-checkout').addEventListener('click', () => {
+  openCheckout();
+});
+
+checkoutClose.addEventListener('click', closeCheckout);
+checkoutOverlay.addEventListener('click', e => {
+  if (e.target === checkoutOverlay) closeCheckout();
+});
+
+btnCheckoutToStep2.addEventListener('click', () => {
+  step1.classList.add('hidden');
+  step2.classList.remove('hidden');
+});
+
+btnCheckoutBack.addEventListener('click', () => {
+  step2.classList.add('hidden');
+  step1.classList.remove('hidden');
+});
+
+// Payment option styling
+const paymentLabels = document.querySelectorAll('.payment-option');
+paymentLabels.forEach(label => {
+  const radio = label.querySelector('input[type="radio"]');
+  if (radio) {
+    radio.addEventListener('change', () => {
+      paymentLabels.forEach(l => l.classList.remove('selected'));
+      if (radio.checked) {
+        label.classList.add('selected');
+      }
+    });
+  }
+});
+
+// Submit checkout form
+checkoutForm.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  const name = $id('checkout-name').value.trim();
+  const phone = $id('checkout-phone').value.trim();
+  const email = $id('checkout-email2').value.trim();
+  const address = $id('checkout-address').value.trim();
+  
+  const t = TRANSLATIONS[currentLang] || TRANSLATIONS.fr;
+
+  if (!name || !phone || !email || !address) {
+    showToast(currentLang === 'fr' ? 'Veuillez remplir tous les champs obligatoires.' : (currentLang === 'en' ? 'Please fill in all required fields.' : 'Bitte füllen Sie alle Pflichtfelder aus.'));
+    return;
+  }
+
+  if (!email.includes('@')) {
+    showToast(t.toast_email_invalid);
+    return;
+  }
+
+  // Generate order number
+  const orderNum = 'DEM-' + Math.floor(100000 + Math.random() * 900000);
+  orderNumberEl.textContent = orderNum;
+
+  // Clear cart
+  cart = [];
+  updateCart();
+
+  // Go to step 3
+  step2.classList.add('hidden');
+  step3.classList.remove('hidden');
+});
+
+btnCheckoutDone.addEventListener('click', () => {
+  closeCheckout();
 });
 
 /* ── TOAST ───────────────────────────────────────────────── */
@@ -630,7 +772,28 @@ const TRANSLATIONS = {
     // Modal
     modal_specs: "Caractéristiques techniques",
     modal_add_cart: "Ajouter au panier",
-    modal_reviews: "avis"
+    modal_reviews: "avis",
+    // Checkout
+    checkout_title: "📦 Récapitulatif de commande",
+    checkout_subtotal: "Sous-total",
+    checkout_shipping: "Livraison",
+    checkout_free: "Gratuite",
+    checkout_total: "Total",
+    checkout_continue: "Continuer →",
+    checkout_info_title: "📋 Vos informations",
+    checkout_fullname: "Nom complet",
+    checkout_phone: "Téléphone",
+    checkout_email: "Email",
+    checkout_address: "Adresse de livraison",
+    checkout_payment: "Mode de paiement",
+    checkout_card: "Carte bancaire",
+    checkout_transfer: "Virement bancaire",
+    checkout_confirm: "✅ Confirmer la commande",
+    checkout_back: "← Retour au récapitulatif",
+    checkout_success_title: "Commande confirmée !",
+    checkout_success_msg: "Merci pour votre commande. Vous recevrez un email de confirmation avec les détails de livraison sous peu.",
+    checkout_order_num: "N° de commande :",
+    checkout_done: "Fermer"
   },
   en: {
     nav_home: "Home",
@@ -718,7 +881,28 @@ const TRANSLATIONS = {
     btn_details: "View details",
     modal_specs: "Technical specifications",
     modal_add_cart: "Add to cart",
-    modal_reviews: "reviews"
+    modal_reviews: "reviews",
+    // Checkout
+    checkout_title: "📦 Order Summary",
+    checkout_subtotal: "Subtotal",
+    checkout_shipping: "Shipping",
+    checkout_free: "Free",
+    checkout_total: "Total",
+    checkout_continue: "Continue →",
+    checkout_info_title: "📋 Your Information",
+    checkout_fullname: "Full Name",
+    checkout_phone: "Phone Number",
+    checkout_email: "Email Address",
+    checkout_address: "Shipping Address",
+    checkout_payment: "Payment Method",
+    checkout_card: "Credit Card",
+    checkout_transfer: "Bank Transfer",
+    checkout_confirm: "✅ Confirm Order",
+    checkout_back: "← Back to summary",
+    checkout_success_title: "Order Confirmed!",
+    checkout_success_msg: "Thank you for your order. You will receive a confirmation email with delivery details shortly.",
+    checkout_order_num: "Order No.:",
+    checkout_done: "Close"
   },
   de: {
     nav_home: "Startseite",
@@ -806,7 +990,28 @@ const TRANSLATIONS = {
     btn_details: "Details ansehen",
     modal_specs: "Technische Daten",
     modal_add_cart: "In den Warenkorb",
-    modal_reviews: "Bewertungen"
+    modal_reviews: "Bewertungen",
+    // Checkout
+    checkout_title: "📦 Bestellübersicht",
+    checkout_subtotal: "Zwischensumme",
+    checkout_shipping: "Versand",
+    checkout_free: "Kostenlos",
+    checkout_total: "Gesamt",
+    checkout_continue: "Weiter →",
+    checkout_info_title: "📋 Ihre Informationen",
+    checkout_fullname: "Vollständiger Name",
+    checkout_phone: "Telefonnummer",
+    checkout_email: "E-Mail-Adresse",
+    checkout_address: "Lieferadresse",
+    checkout_payment: "Zahlungsmethode",
+    checkout_card: "Kreditkarte",
+    checkout_transfer: "Überweisung",
+    checkout_confirm: "✅ Bestellung bestätigen",
+    checkout_back: "← Zurück zur Übersicht",
+    checkout_success_title: "Bestellung bestätigt!",
+    checkout_success_msg: "Vielen Dank für Ihre Bestellung. Sie erhalten in Kürze eine Bestätigungs-E-Mail mit den Lieferdetails.",
+    checkout_order_num: "Bestellnummer:",
+    checkout_done: "Schließen"
   }
 };
 
