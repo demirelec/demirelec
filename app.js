@@ -218,6 +218,359 @@ const PRODUCTS = [
       { label: "Mémoire de position", val: "Oui" },
       { label: "Installation", val: "Boîte encastrée Ø67mm" }
     ]
+  },
+  /* ── NOUVEAUX PRODUITS ──────────────────────────────────── */
+  {
+    id: 9,
+    name: "Pince Ampèremétrique 400A",
+    price: 54.90,
+    oldPrice: 69.90,
+    img: "clamp_meter.png",
+    category: "mesure",
+    rating: 5,
+    reviews: 96,
+    badge: "Populaire",
+    badgeClass: "badge-hot",
+    tags: ["Mesure", "Professionnel"],
+    desc: "Pince ampèremétrique numérique jusqu'à 400A AC/DC. Mesure courant, tension, résistance et continuité. Mâchoires 28mm, rétroéclairage et maintien de données.",
+    longDesc: "Cette pince ampèremétrique professionnelle est l'outil idéal pour mesurer le courant sans couper le circuit. Ses mâchoires de 28mm acceptent les câbles de forte section. L'écran LCD rétroéclairé affiche les mesures en temps réel. La fonction Data Hold fige la dernière mesure pour une lecture confortable. Livrée avec cordon de mesure et pochette de rangement.",
+    specs: [
+      { label: "Courant AC/DC", val: "0 – 400A" },
+      { label: "Tension AC/DC", val: "0 – 600V" },
+      { label: "Résistance", val: "0 – 40MΩ" },
+      { label: "Ouverture mâchoire", val: "28mm" },
+      { label: "Écran", val: "LCD rétroéclairé" },
+      { label: "Alimentation", val: "2x AAA" }
+    ]
+  },
+  {
+    id: 10,
+    name: "Détecteur de Tension Sans Contact",
+    price: 22.50,
+    oldPrice: null,
+    img: "voltage_detector.png",
+    category: "mesure",
+    rating: 4,
+    reviews: 203,
+    badge: null,
+    badgeClass: null,
+    tags: ["Mesure", "Sécurité"],
+    desc: "Détecteur de tension sans contact 12V–1000V AC. Alarme sonore et LED rouge en cas de présence de tension. Format stylo compact et ergonomique.",
+    longDesc: "Ce détecteur de tension sans contact est un outil de sécurité indispensable pour tout électricien. Il suffit d'approcher la pointe du détecteur d'un câble ou d'une prise pour savoir si elle est sous tension. L'alarme sonore et le voyant LED rouge s'activent immédiatement en cas de présence de tension. Ultra compact, il se glisse dans la poche de votre bleu de travail.",
+    specs: [
+      { label: "Plage de détection", val: "12V – 1000V AC" },
+      { label: "Indication", val: "LED rouge + bip sonore" },
+      { label: "Sensibilité", val: "Réglable (haute/basse)" },
+      { label: "Alimentation", val: "2x AAA (incluses)" },
+      { label: "Dimensions", val: "155 x 26mm" },
+      { label: "Norme", val: "CAT III 1000V" }
+    ]
+  },
+  {
+    id: 11,
+    name: "Interrupteur Différentiel 40A 30mA",
+    price: 59.90,
+    oldPrice: 74.90,
+    img: "differentiel.png",
+    category: "protection",
+    rating: 5,
+    reviews: 145,
+    badge: "Essentiel",
+    badgeClass: "badge-hot",
+    tags: ["Protection", "Certifié CE"],
+    desc: "Interrupteur différentiel bipolaire 40A / 30mA type AC. Protection des personnes contre les contacts directs et indirects. Conforme NF C 15-100.",
+    longDesc: "Cet interrupteur différentiel 40A 30mA est la pièce maîtresse de la sécurité de votre installation électrique. Il détecte les fuites de courant supérieures à 30mA et coupe instantanément l'alimentation pour protéger les personnes contre l'électrocution. Le bouton test permet de vérifier régulièrement son bon fonctionnement. Installation sur rail DIN 35mm, compatible avec tous les tableaux modulaires standard.",
+    specs: [
+      { label: "Intensité nominale", val: "40A" },
+      { label: "Sensibilité", val: "30mA" },
+      { label: "Type", val: "AC" },
+      { label: "Tension nominale", val: "230V AC" },
+      { label: "Pouvoir de coupure", val: "6kA" },
+      { label: "Norme", val: "IEC 61008 / NF C 15-100" }
+    ]
+  },
+  {
+    id: 12,
+    name: "Parafoudre Modulaire Type 2",
+    price: 44.50,
+    oldPrice: null,
+    img: "parafoudre.png",
+    category: "protection",
+    rating: 4,
+    reviews: 67,
+    badge: null,
+    badgeClass: null,
+    tags: ["Protection", "Certifié CE"],
+    desc: "Parafoudre modulaire type 2 pour tableau électrique. Protection contre les surtensions atmosphériques et industrielles. Indicateur d'état intégré.",
+    longDesc: "Ce parafoudre modulaire type 2 protège votre installation et vos équipements sensibles contre les surtensions transitoires causées par la foudre ou les manœuvres sur le réseau. Son indicateur d'état visuel (vert = OK, rouge = à remplacer) permet un contrôle rapide sans instrument de mesure. Installation simple sur rail DIN, 2 modules de largeur.",
+    specs: [
+      { label: "Type", val: "Type 2 (T2)" },
+      { label: "Tension de service", val: "230/400V AC" },
+      { label: "Courant de décharge max", val: "40kA" },
+      { label: "Niveau de protection", val: "≤1.5kV" },
+      { label: "Indicateur d'état", val: "Oui (vert/rouge)" },
+      { label: "Largeur", val: "2 modules DIN" }
+    ]
+  },
+  {
+    id: 13,
+    name: "Spot LED Encastrable 7W Blanc Chaud",
+    price: 14.90,
+    oldPrice: null,
+    img: "spot_led.png",
+    category: "eclairage",
+    rating: 5,
+    reviews: 287,
+    badge: null,
+    badgeClass: null,
+    tags: ["Éclairage"],
+    desc: "Spot LED encastrable ultra-plat 7W, blanc chaud 3000K. Découpe Ø85mm, driver intégré, angle d'éclairage 120°. Idéal pour faux plafonds.",
+    longDesc: "Ce spot LED encastrable ultra-plat s'intègre discrètement dans tous les faux plafonds. Sa faible épaisseur de seulement 25mm le rend compatible avec les espaces les plus réduits. La lumière blanc chaud 3000K crée une ambiance chaleureuse et accueillante. Le driver LED est intégré, aucun transformateur externe n'est nécessaire. Installation rapide grâce aux clips ressorts fournis.",
+    specs: [
+      { label: "Puissance", val: "7W (≈ 50W halogène)" },
+      { label: "Flux lumineux", val: "600 lumens" },
+      { label: "Température couleur", val: "3000K (blanc chaud)" },
+      { label: "Angle", val: "120°" },
+      { label: "Découpe", val: "Ø85mm" },
+      { label: "Durée de vie", val: "30 000h" }
+    ]
+  },
+  {
+    id: 14,
+    name: "Réglette LED Étanche 120cm 36W",
+    price: 39.90,
+    oldPrice: 49.90,
+    img: "reglette_led.png",
+    category: "eclairage",
+    rating: 4,
+    reviews: 118,
+    badge: "Promo",
+    badgeClass: "badge-hot",
+    tags: ["Éclairage", "Pro"],
+    desc: "Réglette LED étanche IP65, longueur 120cm, puissance 36W. Idéale pour garages, ateliers, caves et parkings. Blanc neutre 4000K, 3600 lumens.",
+    longDesc: "Cette réglette LED étanche IP65 est conçue pour les environnements exigeants : garages, ateliers, caves, parkings souterrains et extérieurs couverts. Sa protection IP65 la rend résistante à la poussière et aux projections d'eau. L'éclairage puissant de 3600 lumens en blanc neutre 4000K garantit un confort visuel optimal pour le travail. Installation rapide par clips de fixation fournis.",
+    specs: [
+      { label: "Puissance", val: "36W (≈ 2x 36W fluo)" },
+      { label: "Flux lumineux", val: "3600 lumens" },
+      { label: "Température couleur", val: "4000K (blanc neutre)" },
+      { label: "Indice de protection", val: "IP65" },
+      { label: "Longueur", val: "120cm" },
+      { label: "Durée de vie", val: "40 000h" }
+    ]
+  },
+  {
+    id: 15,
+    name: "Gaine ICTA Diamètre 20mm (25m)",
+    price: 15.90,
+    oldPrice: null,
+    img: null,
+    emoji: "🔵",
+    category: "cablage",
+    rating: 4,
+    reviews: 312,
+    badge: null,
+    badgeClass: null,
+    tags: ["Câblage"],
+    desc: "Gaine annelée ICTA diamètre 20mm en rouleau de 25 mètres. Pour encastrement des câbles électriques dans les murs et cloisons. Avec tire-fil intégré.",
+    longDesc: "La gaine ICTA (Isolant Cintrable Transversalement Annelé) est indispensable pour toute installation électrique encastrée. Son profil annelé lui confère une excellente flexibilité pour le passage dans les saignées et les cloisons. Le tire-fil intégré facilite le passage des câbles après la pose. Compatible avec les câbles de section jusqu'à 3x2.5mm².",
+    specs: [
+      { label: "Diamètre extérieur", val: "20mm" },
+      { label: "Diamètre intérieur", val: "14.1mm" },
+      { label: "Longueur", val: "25 mètres" },
+      { label: "Matière", val: "PVC annelé" },
+      { label: "Tire-fil", val: "Oui (intégré)" },
+      { label: "Norme", val: "NF EN 61386-22" }
+    ]
+  },
+  {
+    id: 16,
+    name: "Boîte de Dérivation Étanche IP65",
+    price: 8.90,
+    oldPrice: null,
+    img: null,
+    emoji: "📦",
+    category: "cablage",
+    rating: 5,
+    reviews: 178,
+    badge: null,
+    badgeClass: null,
+    tags: ["Câblage"],
+    desc: "Boîte de dérivation étanche IP65 avec couvercle à vis. Dimensions 150x110x70mm. 10 entrées de câbles. Idéale pour raccordements extérieurs.",
+    longDesc: "Cette boîte de dérivation étanche IP65 est conçue pour les raccordements électriques en milieu humide ou en extérieur. Son couvercle à vis assure une fermeture hermétique. Les 10 entrées de câbles avec membranes pré-percées permettent un passage facile des conducteurs tout en maintenant l'étanchéité. Parfaite pour les installations en jardin, terrasse ou local technique.",
+    specs: [
+      { label: "Dimensions", val: "150 x 110 x 70mm" },
+      { label: "Indice de protection", val: "IP65" },
+      { label: "Entrées de câbles", val: "10 (à membranes)" },
+      { label: "Matière", val: "ABS anti-UV" },
+      { label: "Fermeture", val: "Couvercle à vis" },
+      { label: "Fixation", val: "Vis + chevilles (fournies)" }
+    ]
+  },
+  {
+    id: 17,
+    name: "Interrupteur Va-et-Vient Blanc",
+    price: 9.90,
+    oldPrice: null,
+    img: null,
+    emoji: "💡",
+    category: "installation",
+    rating: 5,
+    reviews: 421,
+    badge: null,
+    badgeClass: null,
+    tags: ["Installation"],
+    desc: "Interrupteur va-et-vient 10A blanc satiné. Commande d'éclairage depuis deux points. Design moderne épuré, touche large et clips de fixation rapide.",
+    longDesc: "Cet interrupteur va-et-vient permet de commander un point d'éclairage depuis deux endroits différents (entrée et sortie d'une pièce, haut et bas d'un escalier). Sa touche large facilite l'utilisation même les mains pleines. Le mécanisme à clipser s'installe en quelques secondes sur les boîtes d'encastrement standard Ø67mm. Finition blanc satiné intemporelle.",
+    specs: [
+      { label: "Intensité nominale", val: "10A" },
+      { label: "Tension", val: "230V AC" },
+      { label: "Fonction", val: "Va-et-vient" },
+      { label: "Fixation", val: "Vis ou griffes" },
+      { label: "Encastrement", val: "Boîte Ø67mm" },
+      { label: "Finition", val: "Blanc satiné" }
+    ]
+  },
+  {
+    id: 18,
+    name: "Thermostat Programmable Wi-Fi",
+    price: 79.90,
+    oldPrice: 99.90,
+    img: null,
+    emoji: "🌡️",
+    category: "installation",
+    rating: 5,
+    reviews: 156,
+    badge: "Nouveau",
+    badgeClass: "badge-new",
+    tags: ["Installation", "Smart"],
+    desc: "Thermostat connecté Wi-Fi avec écran tactile couleur. Programmation hebdomadaire, contrôle via smartphone (iOS/Android). Compatible chauffage électrique et chaudière.",
+    longDesc: "Ce thermostat programmable Wi-Fi dernière génération vous permet de contrôler la température de votre logement depuis n'importe où via l'application smartphone gratuite. Son écran tactile couleur intuitif affiche la température ambiante, la programmation et la consommation énergétique. La programmation hebdomadaire (6 plages horaires/jour) optimise votre confort tout en réduisant votre facture d'énergie jusqu'à 30%.",
+    specs: [
+      { label: "Écran", val: "Tactile couleur 3.5\"" },
+      { label: "Connectivité", val: "Wi-Fi 2.4GHz" },
+      { label: "Plage de réglage", val: "5°C – 35°C" },
+      { label: "Précision", val: "±0.5°C" },
+      { label: "Programmation", val: "7 jours / 6 plages" },
+      { label: "Compatibilité", val: "Chauffage élec. + chaudière" }
+    ]
+  },
+  {
+    id: 19,
+    name: "Détecteur de Mouvement Mural 180°",
+    price: 24.50,
+    oldPrice: null,
+    img: null,
+    emoji: "👁️",
+    category: "installation",
+    rating: 4,
+    reviews: 134,
+    badge: null,
+    badgeClass: null,
+    tags: ["Installation"],
+    desc: "Détecteur de mouvement infrarouge 180°, portée 12m. Pour commande automatique d'éclairage. Réglage de la temporisation, luminosité et sensibilité.",
+    longDesc: "Ce détecteur de mouvement infrarouge passif (PIR) commande automatiquement l'éclairage lorsqu'une personne entre dans la zone de détection. Son angle de 180° et sa portée de 12 mètres couvrent une large surface. Trois réglages intégrés (temporisation de 10s à 7min, seuil de luminosité, sensibilité) permettent une personnalisation complète. Installation en remplacement d'un interrupteur standard.",
+    specs: [
+      { label: "Angle de détection", val: "180°" },
+      { label: "Portée", val: "12 mètres" },
+      { label: "Temporisation", val: "10s – 7 min" },
+      { label: "Charge max", val: "1200W (LED 300W)" },
+      { label: "Montage", val: "Mural (boîte Ø67mm)" },
+      { label: "Indice de protection", val: "IP44" }
+    ]
+  },
+  {
+    id: 20,
+    name: "Panneau Solaire Portable 100W",
+    price: 149.90,
+    oldPrice: 189.90,
+    img: "panneau_solaire.png",
+    category: "energie",
+    rating: 5,
+    reviews: 89,
+    badge: "Eco+",
+    badgeClass: "badge-eco",
+    tags: ["Énergie verte", "Portable"],
+    desc: "Panneau solaire monocristallin pliable 100W. Connecteur MC4, régulateur intégré, port USB. Idéal pour camping, van aménagé et autonomie énergétique.",
+    longDesc: "Ce panneau solaire portable de 100W utilise des cellules monocristallines à haut rendement (22%) pour une production d'énergie maximale même par temps nuageux. Son design pliable et sa poignée de transport le rendent facile à déplacer. Équipé de connecteurs MC4 standard pour le raccordement à une batterie ou un régulateur, et de 2 ports USB pour la charge directe de smartphones et tablettes.",
+    specs: [
+      { label: "Puissance", val: "100W crête" },
+      { label: "Rendement", val: "22% monocristallin" },
+      { label: "Tension en circuit ouvert", val: "21.6V" },
+      { label: "Connecteurs", val: "MC4 + 2x USB" },
+      { label: "Poids", val: "4.2 kg" },
+      { label: "Dimensions plié", val: "55 x 42 x 5 cm" }
+    ]
+  },
+  {
+    id: 21,
+    name: "Batterie de Stockage LiFePO4 12V 100Ah",
+    price: 299.00,
+    oldPrice: null,
+    img: "batterie_stockage.png",
+    category: "energie",
+    rating: 5,
+    reviews: 43,
+    badge: null,
+    badgeClass: null,
+    tags: ["Énergie verte"],
+    desc: "Batterie lithium fer phosphate (LiFePO4) 12V 100Ah. BMS intégré, 4000+ cycles, sans entretien. Parfaite pour installations solaires et camping-car.",
+    longDesc: "Cette batterie LiFePO4 est le choix optimal pour le stockage d'énergie solaire et les véhicules de loisirs. La technologie lithium fer phosphate offre une durée de vie exceptionnelle (4000+ cycles à 80% DOD), une sécurité maximale (pas de risque d'incendie) et un poids réduit de 60% par rapport aux batteries plomb. Le BMS (Battery Management System) intégré protège contre les surcharges, décharges profondes et courts-circuits.",
+    specs: [
+      { label: "Capacité", val: "100Ah (1280Wh)" },
+      { label: "Tension nominale", val: "12.8V" },
+      { label: "Chimie", val: "LiFePO4" },
+      { label: "Cycles de vie", val: "> 4000 (80% DOD)" },
+      { label: "BMS intégré", val: "Oui" },
+      { label: "Poids", val: "11.5 kg" }
+    ]
+  },
+  {
+    id: 22,
+    name: "Régulateur de Charge MPPT 30A",
+    price: 89.90,
+    oldPrice: null,
+    img: null,
+    emoji: "⚡",
+    category: "energie",
+    rating: 4,
+    reviews: 72,
+    badge: null,
+    badgeClass: null,
+    tags: ["Énergie verte"],
+    desc: "Régulateur de charge solaire MPPT 30A. Rendement 99%, écran LCD, compatible batteries 12V/24V auto-détection. Suivi de production intégré.",
+    longDesc: "Ce régulateur de charge MPPT (Maximum Power Point Tracking) optimise la production de vos panneaux solaires en suivant en permanence le point de puissance maximale. Son rendement de conversion de 99% surpasse largement les régulateurs PWM classiques. L'écran LCD affiche en temps réel la puissance produite, la tension de batterie et l'état de charge. Compatible avec les systèmes 12V et 24V en auto-détection.",
+    specs: [
+      { label: "Courant de charge max", val: "30A" },
+      { label: "Technologie", val: "MPPT" },
+      { label: "Rendement", val: "> 99%" },
+      { label: "Tension batterie", val: "12V / 24V auto" },
+      { label: "Puissance PV max", val: "390W (12V) / 780W (24V)" },
+      { label: "Affichage", val: "LCD rétroéclairé" }
+    ]
+  },
+  {
+    id: 23,
+    name: "Onduleur Hybride 3000W",
+    price: 459.00,
+    oldPrice: 549.00,
+    img: null,
+    emoji: "🔋",
+    category: "energie",
+    rating: 5,
+    reviews: 38,
+    badge: "Premium",
+    badgeClass: "badge-new",
+    tags: ["Énergie verte", "Pro"],
+    desc: "Onduleur hybride sinusoïdal pur 3000W. Entrée solaire MPPT intégrée, fonction UPS, compatible réseau et hors réseau. Monitoring Wi-Fi.",
+    longDesc: "Cet onduleur hybride polyvalent est le cœur de votre installation solaire autonome ou connectée au réseau. Il convertit le courant continu des panneaux et batteries en courant alternatif 230V sinusoïdal pur, compatible avec tous les appareils. La fonction UPS assure un basculement automatique sur batterie en 10ms en cas de coupure de courant. Le monitoring Wi-Fi vous permet de suivre la production et la consommation en temps réel sur votre smartphone.",
+    specs: [
+      { label: "Puissance continue", val: "3000W" },
+      { label: "Puissance crête", val: "6000W" },
+      { label: "Signal de sortie", val: "Sinusoïdal pur 230V" },
+      { label: "Entrée solaire", val: "MPPT 80A intégré" },
+      { label: "Batterie", val: "24V / 48V" },
+      { label: "Monitoring", val: "Wi-Fi + App mobile" }
+    ]
   }
 ];
 
@@ -555,6 +908,37 @@ document.querySelectorAll('.btn-quick-view').forEach(btn => {
   });
 });
 
+/* ── CATEGORY CARDS CLICK → SCROLL + FILTER ──────────────── */
+document.querySelectorAll('.cat-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const cat = card.dataset.cat;
+    // Scroll to products section
+    const productsSection = $id('produits');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Activate the matching filter button after a short delay (for scroll)
+    setTimeout(() => {
+      const allFilterBtns = document.querySelectorAll('.filter-btn');
+      const allProductCards = document.querySelectorAll('.product-card');
+      allFilterBtns.forEach(b => b.classList.remove('active'));
+      const targetBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+      }
+      allProductCards.forEach(pc => {
+        if (pc.dataset.category === cat) {
+          pc.classList.remove('hidden');
+          pc.style.animation = 'fadeInUp 0.4s ease';
+          setTimeout(() => pc.style.animation = '', 400);
+        } else {
+          pc.classList.add('hidden');
+        }
+      });
+    }, 300);
+  });
+});
+
 function openModal(pid) {
   const p = PRODUCTS[pid];
   if (!p) return;
@@ -701,17 +1085,17 @@ const TRANSLATIONS = {
     cat_title: 'Nos <span class="text-accent">Catégories</span>',
     cat_subtitle: "Trouvez rapidement ce dont vous avez besoin",
     cat_mesure: "Mesure & Test",
-    cat_mesure_count: "24 produits",
+    cat_mesure_count: "4 produits",
     cat_protection: "Protection",
-    cat_protection_count: "18 produits",
+    cat_protection_count: "4 produits",
     cat_eclairage: "Éclairage",
-    cat_eclairage_count: "45 produits",
+    cat_eclairage_count: "4 produits",
     cat_cablage: "Câblage",
-    cat_cablage_count: "62 produits",
+    cat_cablage_count: "4 produits",
     cat_installation: "Installation",
-    cat_installation_count: "31 produits",
+    cat_installation_count: "4 produits",
     cat_energie: "Énergie verte",
-    cat_energie_count: "15 produits",
+    cat_energie_count: "4 produits",
     // Products
     prod_tag: "Catalogue",
     prod_title: 'Nos <span class="text-accent">Produits</span>',
@@ -722,6 +1106,7 @@ const TRANSLATIONS = {
     filter_eclairage: "Éclairage",
     filter_cablage: "Câblage",
     filter_installation: "Installation",
+    filter_energie: "Énergie verte",
     // Promo
     promo_shipping: "Livraison Offerte",
     promo_shipping_desc: "Pour toute commande supérieure à 50€ · Délai 24-48h",
@@ -817,17 +1202,17 @@ const TRANSLATIONS = {
     cat_title: 'Our <span class="text-accent">Categories</span>',
     cat_subtitle: "Quickly find what you need",
     cat_mesure: "Measurement & Testing",
-    cat_mesure_count: "24 products",
+    cat_mesure_count: "4 products",
     cat_protection: "Protection",
-    cat_protection_count: "18 products",
+    cat_protection_count: "4 products",
     cat_eclairage: "Lighting",
-    cat_eclairage_count: "45 products",
+    cat_eclairage_count: "4 products",
     cat_cablage: "Wiring",
-    cat_cablage_count: "62 products",
+    cat_cablage_count: "4 products",
     cat_installation: "Installation",
-    cat_installation_count: "31 products",
+    cat_installation_count: "4 products",
     cat_energie: "Green Energy",
-    cat_energie_count: "15 products",
+    cat_energie_count: "4 products",
     prod_tag: "Catalogue",
     prod_title: 'Our <span class="text-accent">Products</span>',
     prod_subtitle: "Certified and guaranteed professional equipment",
@@ -837,6 +1222,7 @@ const TRANSLATIONS = {
     filter_eclairage: "Lighting",
     filter_cablage: "Wiring",
     filter_installation: "Installation",
+    filter_energie: "Green Energy",
     promo_shipping: "Free Shipping",
     promo_shipping_desc: "For orders over 50€ · Delivery 24-48h",
     promo_warranty: "2-Year Warranty",
@@ -882,7 +1268,6 @@ const TRANSLATIONS = {
     modal_specs: "Technical specifications",
     modal_add_cart: "Add to cart",
     modal_reviews: "reviews",
-    // Checkout
     checkout_title: "📦 Order Summary",
     checkout_subtotal: "Subtotal",
     checkout_shipping: "Shipping",
@@ -926,17 +1311,17 @@ const TRANSLATIONS = {
     cat_title: 'Unsere <span class="text-accent">Kategorien</span>',
     cat_subtitle: "Finden Sie schnell, was Sie brauchen",
     cat_mesure: "Messen & Prüfen",
-    cat_mesure_count: "24 Produkte",
+    cat_mesure_count: "4 Produkte",
     cat_protection: "Schutz",
-    cat_protection_count: "18 Produkte",
+    cat_protection_count: "4 Produkte",
     cat_eclairage: "Beleuchtung",
-    cat_eclairage_count: "45 Produkte",
+    cat_eclairage_count: "4 Produkte",
     cat_cablage: "Verkabelung",
-    cat_cablage_count: "62 Produkte",
+    cat_cablage_count: "4 Produkte",
     cat_installation: "Installation",
-    cat_installation_count: "31 Produkte",
+    cat_installation_count: "4 Produkte",
     cat_energie: "Grüne Energie",
-    cat_energie_count: "15 Produkte",
+    cat_energie_count: "4 Produkte",
     prod_tag: "Katalog",
     prod_title: 'Unsere <span class="text-accent">Produkte</span>',
     prod_subtitle: "Zertifiziertes und garantiertes Profi-Material",
@@ -946,6 +1331,7 @@ const TRANSLATIONS = {
     filter_eclairage: "Beleuchtung",
     filter_cablage: "Verkabelung",
     filter_installation: "Installation",
+    filter_energie: "Grüne Energie",
     promo_shipping: "Kostenloser Versand",
     promo_shipping_desc: "Für Bestellungen über 50€ · Lieferung 24-48h",
     promo_warranty: "2 Jahre Garantie",

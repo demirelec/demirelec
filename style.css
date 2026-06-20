@@ -527,7 +527,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .tag-pro { background: rgba(249,115,22,0.12); border-color: rgba(249,115,22,0.2); color: #fb923c; }
 .tag-cert { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.2); color: #4ade80; }
 .tag-smart { background: rgba(168,85,247,0.12); border-color: rgba(168,85,247,0.2); color: #c084fc; }
+.tag-eco { background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.2); color: #4ade80; }
 
+.product-img-placeholder {
+  width: 100%; height: 220px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 4.5rem;
+  background: linear-gradient(135deg, var(--clr-surface2) 0%, rgba(59,130,246,0.08) 100%);
+  border-bottom: 1px solid var(--clr-border);
+  position: relative;
+}
+.product-img-placeholder::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(59,130,246,0.1), transparent 70%);
+}
 .product-name {
   font-size: 1rem; font-weight: 700; margin-bottom: 10px;
   line-height: 1.35; color: var(--clr-white);
