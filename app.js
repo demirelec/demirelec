@@ -569,6 +569,99 @@ const PRODUCTS = [
       { label: "Batterie", val: "24V / 48V" },
       { label: "Monitoring", val: "Wi-Fi + App mobile" }
     ]
+  },
+  /* ── OUTILS ÉLECTRICIEN ──────────────────────────────────── */
+  {
+    id: 24,
+    name: "Pince Coupante Diagonale VDE 1000V",
+    price: 29.90,
+    oldPrice: 39.90,
+    img: "pince_coupante.png",
+    category: "outils",
+    rating: 5,
+    reviews: 187,
+    badge: "Populaire",
+    badgeClass: "badge-hot",
+    tags: ["Outils", "Professionnel"],
+    desc: "Pince coupante diagonale isolée VDE 1000V pour électriciens. Lames en acier chrome-vanadium trempé, coupe précise des fils jusqu'à 4mm². Poignées bi-matière ergonomiques.",
+    longDesc: "Cette pince coupante diagonale est un outil essentiel pour tout électricien professionnel. Certifiée VDE 1000V, elle garantit une protection maximale lors des travaux sous tension. Ses lames en acier chrome-vanadium trempé par induction offrent une coupe nette et précise sur les fils de cuivre et d'aluminium jusqu'à 4mm². Les poignées bi-matière (caoutchouc souple et plastique dur) assurent un grip optimal et réduisent la fatigue lors d'une utilisation prolongée. Le ressort de rappel intégré facilite les coupes répétitives.",
+    specs: [
+      { label: "Isolation", val: "VDE 1000V certifié" },
+      { label: "Longueur", val: "160mm" },
+      { label: "Capacité de coupe", val: "Fil Ø 4mm² max" },
+      { label: "Matière lames", val: "Acier chrome-vanadium" },
+      { label: "Poignées", val: "Bi-matière ergonomiques" },
+      { label: "Norme", val: "IEC 60900 / EN 60900" }
+    ]
+  },
+  {
+    id: 25,
+    name: "Pince à Bec Long Isolée VDE 200mm",
+    price: 24.90,
+    oldPrice: null,
+    img: "pince_bec_long.png",
+    category: "outils",
+    rating: 5,
+    reviews: 134,
+    badge: null,
+    badgeClass: null,
+    tags: ["Outils", "Professionnel"],
+    desc: "Pince à bec long (bec effilé) isolée VDE 1000V, longueur 200mm. Idéale pour le pliage, le maintien et la manipulation des fils dans les espaces restreints. Bec droit strié.",
+    longDesc: "La pince à bec long isolée VDE est l'outil de précision par excellence pour les électriciens. Son bec effilé et strié permet d'atteindre les zones difficiles d'accès dans les tableaux électriques, boîtes de dérivation et coffrets. Elle est parfaite pour plier, maintenir et positionner les fils avec précision. L'isolation VDE 1000V certifiée offre une sécurité totale lors des interventions sur des installations sous tension. Les poignées antidérapantes bi-matière garantissent un confort d'utilisation optimal.",
+    specs: [
+      { label: "Isolation", val: "VDE 1000V certifié" },
+      { label: "Longueur totale", val: "200mm" },
+      { label: "Forme du bec", val: "Droit effilé, strié" },
+      { label: "Matière", val: "Acier chrome-vanadium" },
+      { label: "Tranchant latéral", val: "Oui" },
+      { label: "Norme", val: "IEC 60900 / EN 60900" }
+    ]
+  },
+  {
+    id: 26,
+    name: "Pince à Dénuder Automatique 0.2-6mm²",
+    price: 34.50,
+    oldPrice: 42.00,
+    img: "pince_denudeur.png",
+    category: "outils",
+    rating: 5,
+    reviews: 256,
+    badge: "Nouveau",
+    badgeClass: "badge-new",
+    tags: ["Outils", "Professionnel"],
+    desc: "Pince à dénuder automatique auto-ajustable pour câbles de 0.2 à 6mm². Dénudage précis sans endommager le conducteur. Fonction coupe-fil et coupe-gaine intégrée.",
+    longDesc: "Cette pince à dénuder automatique est le gain de temps idéal pour tous les professionnels de l'électricité. Son mécanisme auto-ajustable s'adapte automatiquement au diamètre du câble, de 0.2mm² à 6mm², pour un dénudage parfait à chaque fois. Le système de calibrage automatique élimine le risque d'entailler le conducteur en cuivre. En plus du dénudage, elle intègre une fonction coupe-fil (jusqu'à 2.5mm²) et un coupe-gaine pour les câbles multiconducteurs. La vis de réglage permet d'affiner la profondeur de coupe selon le type d'isolant.",
+    specs: [
+      { label: "Plage de dénudage", val: "0.2 – 6mm²" },
+      { label: "Type", val: "Automatique auto-ajustable" },
+      { label: "Longueur", val: "190mm" },
+      { label: "Coupe-fil", val: "Oui (jusqu'à 2.5mm²)" },
+      { label: "Coupe-gaine", val: "Oui (intégré)" },
+      { label: "Poids", val: "230g" }
+    ]
+  },
+  {
+    id: 27,
+    name: "Pince à Sertir à Cliquet 0.5-6mm²",
+    price: 39.90,
+    oldPrice: null,
+    img: "pince_sertir.png",
+    category: "outils",
+    rating: 4,
+    reviews: 98,
+    badge: null,
+    badgeClass: null,
+    tags: ["Outils", "Professionnel"],
+    desc: "Pince à sertir à cliquet pour cosses et embouts isolés de 0.5 à 6mm². Mécanisme à cliquet garantissant un sertissage complet et régulier. Livrée avec assortiment de cosses.",
+    longDesc: "Cette pince à sertir professionnelle à cliquet est conçue pour réaliser des sertissages parfaits à chaque utilisation. Le mécanisme à cliquet empêche l'ouverture de la pince tant que le sertissage n'est pas terminé, garantissant ainsi une connexion fiable et sécurisée. Compatible avec les cosses et embouts isolés de section 0.5 à 6mm² (repères couleur rouge, bleu et jaune). Les matrices de sertissage sont intégrées et codées par couleur pour un choix rapide. Livrée avec un assortiment de 100 cosses assorties dans un boîtier de rangement.",
+    specs: [
+      { label: "Plage de sertissage", val: "0.5 – 6mm²" },
+      { label: "Type", val: "À cliquet" },
+      { label: "Longueur", val: "220mm" },
+      { label: "Matrices", val: "3 (rouge/bleu/jaune)" },
+      { label: "Cosses incluses", val: "100 pièces assorties" },
+      { label: "Poids", val: "340g" }
+    ]
   }
 ];
 
@@ -1094,6 +1187,8 @@ const TRANSLATIONS = {
     cat_installation_count: "4 produits",
     cat_energie: "Énergie verte",
     cat_energie_count: "4 produits",
+    cat_outils: "Outils",
+    cat_outils_count: "4 produits",
     // Products
     prod_tag: "Catalogue",
     prod_title: 'Nos <span class="text-accent">Produits</span>',
@@ -1105,6 +1200,7 @@ const TRANSLATIONS = {
     filter_cablage: "Câblage",
     filter_installation: "Installation",
     filter_energie: "Énergie verte",
+    filter_outils: "Outils",
     // Promo
     promo_shipping: "Livraison Offerte",
     promo_shipping_desc: "Pour toute commande supérieure à 50€ · Délai 24-48h",
@@ -1211,6 +1307,8 @@ const TRANSLATIONS = {
     cat_installation_count: "4 products",
     cat_energie: "Green Energy",
     cat_energie_count: "4 products",
+    cat_outils: "Tools",
+    cat_outils_count: "4 products",
     prod_tag: "Catalogue",
     prod_title: 'Our <span class="text-accent">Products</span>',
     prod_subtitle: "Certified and guaranteed professional equipment",
@@ -1221,6 +1319,7 @@ const TRANSLATIONS = {
     filter_cablage: "Wiring",
     filter_installation: "Installation",
     filter_energie: "Green Energy",
+    filter_outils: "Tools",
     promo_shipping: "Free Shipping",
     promo_shipping_desc: "For orders over 50€ · Delivery 24-48h",
     promo_warranty: "2-Year Warranty",
@@ -1320,6 +1419,8 @@ const TRANSLATIONS = {
     cat_installation_count: "4 Produkte",
     cat_energie: "Grüne Energie",
     cat_energie_count: "4 Produkte",
+    cat_outils: "Werkzeuge",
+    cat_outils_count: "4 Produkte",
     prod_tag: "Katalog",
     prod_title: 'Unsere <span class="text-accent">Produkte</span>',
     prod_subtitle: "Zertifiziertes und garantiertes Profi-Material",
@@ -1330,6 +1431,7 @@ const TRANSLATIONS = {
     filter_cablage: "Verkabelung",
     filter_installation: "Installation",
     filter_energie: "Grüne Energie",
+    filter_outils: "Werkzeuge",
     promo_shipping: "Kostenloser Versand",
     promo_shipping_desc: "Für Bestellungen über 50€ · Lieferung 24-48h",
     promo_warranty: "2 Jahre Garantie",
