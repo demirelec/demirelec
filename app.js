@@ -662,6 +662,29 @@ const PRODUCTS = [
       { label: "Cosses incluses", val: "100 pièces assorties" },
       { label: "Poids", val: "340g" }
     ]
+  },
+  {
+    id: 28,
+    name: "Tire-fils Électricien Professionnel 20m",
+    price: 24.90,
+    oldPrice: 29.90,
+    img: "tire_fils.png",
+    category: "cablage",
+    rating: 5,
+    reviews: 145,
+    badge: "Nouveau",
+    badgeClass: "badge-new",
+    tags: ["Câblage", "Professionnel"],
+    desc: "Tire-fils professionnel de 20 mètres en polyester flexible avec tête de guidage à œillet. Idéal pour passer facilement les câbles dans les gaines électriques.",
+    longDesc: "Cette aiguille tire-fils professionnelle de 20 mètres est fabriquée en polyester de haute qualité, offrant un équilibre parfait entre flexibilité et rigidité pour franchir les coudes serrés sans blocage. Dotée d'une tête de guidage flexible avec œillet de tirage robuste en laiton, elle permet d'attacher et de tirer les fils électriques en toute sécurité. Son boîtier de rangement ergonomique en ABS haute résistance protège le tire-fils et facilite le déroulement et l'enroulement rapide.",
+    specs: [
+      { label: "Longueur", val: "20 mètres" },
+      { label: "Diamètre", val: "4 mm" },
+      { label: "Matériau", val: "Polyester haute résistance" },
+      { label: "Résistance", val: "Traction jusqu'à 130 kg" },
+      { label: "Tête de guidage", val: "Flexible avec œillet laiton" },
+      { label: "Boîtier", val: "ABS ergonomique antichoc" }
+    ]
   }
 ];
 
@@ -1182,7 +1205,7 @@ const TRANSLATIONS = {
     cat_eclairage: "Éclairage",
     cat_eclairage_count: "4 produits",
     cat_cablage: "Câblage",
-    cat_cablage_count: "4 produits",
+    cat_cablage_count: "5 produits",
     cat_installation: "Installation",
     cat_installation_count: "4 produits",
     cat_energie: "Énergie verte",
@@ -1302,7 +1325,7 @@ const TRANSLATIONS = {
     cat_eclairage: "Lighting",
     cat_eclairage_count: "4 products",
     cat_cablage: "Wiring",
-    cat_cablage_count: "4 products",
+    cat_cablage_count: "5 products",
     cat_installation: "Installation",
     cat_installation_count: "4 products",
     cat_energie: "Green Energy",
@@ -1414,7 +1437,7 @@ const TRANSLATIONS = {
     cat_eclairage: "Beleuchtung",
     cat_eclairage_count: "4 Produkte",
     cat_cablage: "Verkabelung",
-    cat_cablage_count: "4 Produkte",
+    cat_cablage_count: "5 Produkte",
     cat_installation: "Installation",
     cat_installation_count: "4 Produkte",
     cat_energie: "Grüne Energie",
